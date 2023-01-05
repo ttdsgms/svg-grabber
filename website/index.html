@@ -3,7 +3,7 @@
 <head>
 	<!--
 *	svg-grabber.netlify.app
-*	ttdosgames.netlify.app
+*	ttdsgms.netlify.app
 *	ttgm.netlify.app
 *	ttgms.netlify.app
 *
@@ -36,8 +36,8 @@
 		<meta property="og:url" content="https://svg-grabber.netlify.app"/>
 		<!--Og Image-->
 			<!--Main-->
-				<meta property="og:image" content="https://raw.githubusercontent.com/ttdsgms/svg-grabber/master/assets/img/svg-grabber-screenshot.png"/>
-				<meta property="og:image:secure_url" content="https://raw.githubusercontent.com/ttdsgms/svg-grabber/master/assets/img/svg-grabber-screenshot.png">
+				<meta property="og:image" content="https://svg-grabber.netlify.app/assets/img/svg-grabber-screenshot.png"/>
+				<meta property="og:image:secure_url" content="https://svg-grabber.netlify.app/assets/img/svg-grabber-screenshot.png">
 				<meta property="og:image:width" content="2560"/>
 				<meta property="og:image:height" content="1600"/>
 				<meta property="og:image:type" content="image/png">
@@ -57,7 +57,7 @@
 		<meta name="twitter:description" content="A tool to quickly preview and get all the svg assets from a website.">
 		<meta name="twitter:creator" content="@ttdsgms">
 		<meta name="twitter:site" content="@ttdsgms">
-		<meta name="twitter:image" content="https://raw.githubusercontent.com/ttdsgms/svg-grabber/master/assets/img/svg-grabber-screenshot.png">
+		<meta name="twitter:image" content="https://svg-grabber.netlify.app/assets/img/svg-grabber-screenshot.png">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:domain" content="svg-grabber">
 		<meta name="twitter:app:country" content="BR">
@@ -77,11 +77,42 @@
 			<path d="M22 23h-4v3h4v3h3V17h-3v6zm19-6h4v3h-4v-3zm-29 3h6v3h-6v-3zm17-3h3v7h-3v-7zm0 13h3v12h-3V30zM9 23h3v7H9v-7zm3 7h3v3h-3v-3zm6 9h3v3h-3v-3zm3 3h3v3h-3v-3zm19 3h3v3h-3v-3zm3 3h3v3h-3v-3zm-16 0h13v3H27v-3zm-3-3h3v6h-3v-6zm-9-12h3v6h-3v-6zm20-3h3v12h-3V30zm6 0h3v12h-3V30zm5 12h3v9h-3v-9zm3-7h3v7h-3v-7zM38 17h3v7h-3v-7zm7 0h3v9h-3v-9zm3 3h4v3h-4v-3zm4 0h3v15h-3V20zm-27-3h4v3h-4v-3zm7-3h6v3h-6v-3z"></path>
 		</svg>
 		<h1 class="title">&lt;svg&gt;grabber</h1>
+		<p onclick="toggleTheme()" class="switcher">Dark</p>
 	</header>
 	<main>
 		<h1>A forma mais fácil de baixar<br><span>&lt;SVG&gt;</span></h1>
+		<p>A extensão SVG Grabber é a maneira mais fácil de baixar imagens SVG de um site. Basta clicar no botão da extensão e supimpa!</p>
 		<button>Conhecer</button>
-		<img src="img/extension-preview.png" alt="Preview da extensão funcionando">
+		<a href="#" class="sponsor">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#6a737d">
+				<path d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"/>
+			</svg>
+			Sponsor
+		</a>
+		<img draggable="false" src="assets/img/svg-grabber-screenshot.png" alt="Preview">
 	</main>
+	<footer>
+		<p>Modified by <a href="https://ttdsgms.netlify.com" target="_blank" rel="noopener noreferrer">TTdsgms</a></p>
+		<p>Forked from ngti/svg-grabber, thank you ngti.</p>
+	</footer>
+	<script>
+		function toggleTheme(){
+		const currentStyles = getComputedStyle(document.documentElement);
+		const switcher = document.querySelector(".switcher");
+
+		if (currentStyles.getPropertyValue('--background') === '#f7f9fa'){
+			document.documentElement.style.setProperty('--background', '#212529');
+			document.documentElement.style.setProperty('--text', '#fafafa');
+			switcher.innerHTML = "Light"
+		} else{
+			document.documentElement.style.setProperty('--background', '#f7f9fa');
+			document.documentElement.style.setProperty('--text', '##1d1d25');
+			switcher.innerHTML = "Dark"
+		}
+		}
+	</script>
+	<!--Emoji-->
+		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script><script>var body = document.getElementsByTagName('body')[0];var total = body.getElementsByTagName('body').length;twemoji.parse(body, {"folder":"https://twemoji.maxcdn.com/v/latest/svg","ext":".svg","base":""});</script><style>img.emoji {width: 28px; margin: 0.5em 0 0.1em; vertical-align: -0.1em; pointer-events: none; -webkit-user-drag: none;}</style>
+	<!--Emoji-->
 </body>
 </html>
