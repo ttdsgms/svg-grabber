@@ -97,7 +97,7 @@ main button::selection{
 main button:hover{
 	border-radius: 1em;
 }
-main a{
+main a.sponsor{
 	cursor: pointer;
 	color: #6a737d;
 	display: flex;
@@ -108,11 +108,11 @@ main a{
 	border-radius: 0.25em;
 	transition: all 0.25s ease-in-out;
 }
-main a:hover{
+main a.sponsor:hover{
 	border-radius: 1em;
 	background-color: #F5F5F5;
 }
-main a svg{
+main a.sponsor svg{
 	width: 1em;
 	height: 1em;
 	padding-right: 0.2em;
