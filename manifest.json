@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+
+	"name": "svg-grabber - get all the svg's from a site",
+	"short_name": "svg-grabber",
+	"description": "A tool to quickly preview and get all the svg assets from a website.",
+	"version": "1.0.2",
+	"background":{
+		"scripts": ["assets/extension/js/background.js"]
+	},
+	"browser_action":{
+		"default_icon": "assets/extension/img/icon/48x48.png"
+	},
+	"icons":{
+		"8": "assets/extension/img/icon/8x8.png",
+		"16": "assets/extension/img/icon/16x16.png",
+		"32": "assets/extension/img/icon/32x32.png",
+		"48": "assets/extension/img/icon/48x48.png",
+		"128": "assets/extension/img/icon/128x128.png",
+		"256": "assets/extension/img/icon/256x256.png",
+		"512": "assets/extension/img/icon/512x512.png",
+		"1024": "assets/extension/img/icon/1024x1024.png"
+	},
+	"permissions": ["activeTab"],
+
+	"content_scripts":[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["assets/extension/js/content.js"]
+		}
+	]
+}
